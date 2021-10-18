@@ -1,0 +1,106 @@
+[
+      {
+            "name": "Dr. Devi praad Shetty",
+            "Workplace": "Narayana Multispeciality Hospital, Bangalore",
+            "img": "https://medsurgeindia.com/wp-content/uploads/2020/02/Dr-Devi-Prasad-Shetty.jpg",
+            "age": 52,
+            "chamber": "Bangalore,India",
+            "Fees": 1000
+      },
+      {
+            "name": "Dr.Suresh Rao KG",
+            "Workplace": "Fortis Escorts Heart Institute, New Delhi",
+            "img": "https://medsurgeindia.com/wp-content/uploads/2020/07/Untitled-design-10.png",
+            "age": 55,
+            "chamber": "New Delhi,India",
+            "Fees": 1200
+      },
+      {
+            "name": "Dr. Ajay Kaul",
+            "Workplace": "BLK Super Speciality Hospital, New Delhi",
+            "img": "https://medsurgeindia.com/wp-content/uploads/2020/07/Untitled-design-3.png",
+            "age": 60,
+            "chamber": "New Delhi,India",
+            "Fees": 800
+      },
+      {
+            "name": "Dr. Sandeep Attawar",
+            "Workplace": "Global Hospitals, Chennai",
+            "img": "https://medsurgeindia.com/wp-content/uploads/2020/03/Untitled-design-91.jpg",
+            "age": 42,
+            "chamber": "Chennai India",
+            "Fees": 1500
+      },
+      {
+            "name": "Dr. Y K Mishra",
+            "Workplace": "Manipal Hospitals Dwarka, Delhi",
+            "img": "https://medsurgeindia.com/wp-content/uploads/2020/07/dr-mishra.jpg",
+            "age": 45,
+            "chamber": "New Delhi,India",
+            "Fees": 1800
+      },
+      {
+            "name": "Dr. K.K Talwar",
+            "Workplace": "Max Super Speciality Hospital, Saket",
+            "img": "https://medsurgeindia.com/wp-content/uploads/2020/02/Dr.-K.K.Talwar.jpg",
+            "age": 52,
+            "chamber": "Kolkata,India",
+            "Fees": 1000
+      },
+      {
+            "name": "Dr.Nandikishore Kapadia",
+            "Workplace": "Kokilaben Dhirubhai Ambani Hospital, Mumbai",
+            "img": "https://medsurgeindia.com/wp-content/uploads/2020/04/Untitled-design-2020-04-04T170824.446.jpg",
+            "age": 52,
+            "chamber": "Mumbai, India",
+            "Fees": 1500
+      },
+      {
+            "name": "Dr.Srinath Vijay",
+            "Workplace": "MGM Healthcare, Chennai",
+            "img": "https://medsurgeindia.com/wp-content/uploads/2020/07/Untitled-design-24.jpg",
+            "age": 39,
+            "chamber": "Punjab, India",
+            "Fees": 1300
+      },
+      {
+            "name": "Dr.Rangasamy",
+            "Workplace": "FDlS Healthcare",
+            "img": "https://medsurgeindia.com/wp-content/uploads/2020/07/Untitled-design-23.jpg",
+            "age": 45,
+            "chamber": "Hydarabad, India",
+            "Fees": 2000
+      },
+      {
+            "name": "Dr.Naresh Trehan",
+            "Workplace": "Medanta - The Medicity Hospital, Gurgaon Healthcare",
+            "img": "https://www.vaidam.com/sites/default/files/dr-naresh-trehan-cardio_thoracic-vascular_surgery-cardiology-2_1.jpeg",
+            "age": 55,
+            "chamber": "Gurgaon , India",
+            "Fees": 1200
+      },
+      {
+            "name": "Dr. Satbir Singh",
+            "Workplace": "BLK Super Speciality Hospital, New Delhi",
+            "img": "https://medsurgeindia.com/wp-content/uploads/2021/08/Dr.-Satbir-Singh-e1628666413413.png",
+            "age": 55,
+            "chamber": "Gujarat",
+            "Fees": 1300
+      },
+      {
+            "name": "Dr. Vivek Jawali",
+            "Workplace": "Fortis Hospital",
+            "img": "https://medsurgeindia.com/wp-content/uploads/2021/04/Dr.-Vivek-Jawali-e1618309081364.jpg",
+            "age": 50,
+            "chamber": "Mumbai,india",
+            "Fees": 1100
+      },
+      {
+            "name": "Dr.Yadvinder Singh",
+            "Workplace": "Amandeep Hospital, Amritsar",
+            "img": "https://medsurgeindia.com/wp-content/uploads/2020/07/Untitled-design-19.png",
+            "age": 50,
+            "chamber": "Punjab, India",
+            "Fees": 1700
+      }
+]

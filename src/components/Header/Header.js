@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { Button, Carousel, Container, Nav, Navbar, Placeholder } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 
@@ -17,14 +17,26 @@ const Header = () => {
             <div>
                   <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                         <Container>
-                              <Navbar.Brand href="#home" className='text-info'>Faysal Diagnostic <br />Center</Navbar.Brand>
+                              <Navbar.Brand to="#home" className='text-info'>Faysal Diagnostic <br />Center</Navbar.Brand>
                               <Navbar.Toggle />
                               <Navbar.Collapse>
                                     <Nav className="me-auto">
-                                          <Nav.Link href="/home">Home</Nav.Link>
-                                          <Nav.Link href="/service">Services</Nav.Link>
-                                          <Nav.Link href="/doctors">Doctors</Nav.Link>
-                                          <Nav.Link href="/About">About Us</Nav.Link>
+                                          <NavLink className='text-decoration-none mx-5' to="/home" activeStyle={{
+                                                fontWeight: "bold",
+                                                color: "red"
+                                          }}>Home</NavLink>
+                                          <NavLink className='text-decoration-none mx-5' to="/service" activeStyle={{
+                                                fontWeight: "bold",
+                                                color: "red"
+                                          }}>Services</NavLink>
+                                          <NavLink className='text-decoration-none mx-5' to="/doctor" activeStyle={{
+                                                fontWeight: "bold",
+                                                color: "red"
+                                          }}>Doctors</NavLink>
+                                          <NavLink className='text-decoration-none mx-5' to="/About" activeStyle={{
+                                                fontWeight: "bold",
+                                                color: "red"
+                                          }}>About Us</NavLink>
                                     </Nav>
                                     <Button onClick={handelLgoin} variant="outline-success">LogIn</Button>
                                     {user?.email ?
@@ -33,8 +45,8 @@ const Header = () => {
                                           <Button onClick={handelSignUp} variant="outline-danger m-2">SignUp</Button>
 
                                     }
-                                    <Navbar.Text>
-                                          Signed in as: <a href="#login">{user.displayName}</a>
+                                    <Navbar.Text className='text-warning'>
+                                          Signed in as: {user.displayName}
                                     </Navbar.Text>
                               </Navbar.Collapse>
 

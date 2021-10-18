@@ -8,6 +8,8 @@ import Footer from './components/Footer/Footer';
 import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
 import AuthProvider from './components/Context/AuthProvider';
+import Doctors from './components/Doctors/Doctors';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -16,7 +18,7 @@ function App() {
         <BrowserRouter>
           <Header></Header>
           <Switch>
-            <Route exact path='/home'>
+            <Route exact path='/'>
               <Home></Home>
             </Route>
             <Route path='/home'>
@@ -25,6 +27,9 @@ function App() {
             <Route path='/about'>
               <AboutUs></AboutUs>
             </Route>
+            <PrivateRoute path='/doctor'>
+              <Doctors></Doctors>
+            </PrivateRoute>
             <Route path='/signup'>
               <SignUp></SignUp>
             </Route>

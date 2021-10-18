@@ -1,9 +1,19 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 import { Button, Carousel, Container, Nav, Navbar, Placeholder } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 
 const Header = () => {
+      const { user } = useAuth()
+      const history = useHistory()
+      const handelLgoin = () => {
+            history.push('/login')
+      }
+      const handelSignUp = () => {
+            history.push('/signup')
+      }
       return (
             <div>
                   <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -17,10 +27,10 @@ const Header = () => {
                                           <Nav.Link href="/doctors">Doctors</Nav.Link>
                                           <Nav.Link href="/About">About Us</Nav.Link>
                                     </Nav>
-                                    <Button variant="outline-success">LogIn</Button>
-                                    <Button variant="outline-danger m-2">LogOut</Button>
+                                    <Button onClick={handelLgoin} variant="outline-success">LogIn</Button>
+                                    <Button onClick={handelSignUp} variant="outline-danger m-2">SignUp</Button>
                                     <Navbar.Text>
-                                          Signed in as: <a href="#login">Mark Otto</a>
+                                          Signed in as: <a href="#login">{user.displayName}</a>
                                     </Navbar.Text>
                               </Navbar.Collapse>
 

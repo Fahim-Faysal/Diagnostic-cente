@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
       return (
-            <div className='bg-info p-4 '>
+            <div className='bg-info p-4 mt-5 '>
                   <div className='d-flex mx-5 justify-content-between'>
                         <div>
                               <h3>Faysal Diagostic Center</h3>

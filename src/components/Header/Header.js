@@ -1,12 +1,11 @@
 import React from 'react';
 import { useHistory } from "react-router-dom";
 import { Button, Carousel, Container, Nav, Navbar, Placeholder } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 
 const Header = () => {
-      const { user } = useAuth()
+      const { user, googleSignOut } = useAuth()
       const history = useHistory()
       const handelLgoin = () => {
             history.push('/login')
@@ -28,7 +27,12 @@ const Header = () => {
                                           <Nav.Link href="/About">About Us</Nav.Link>
                                     </Nav>
                                     <Button onClick={handelLgoin} variant="outline-success">LogIn</Button>
-                                    <Button onClick={handelSignUp} variant="outline-danger m-2">SignUp</Button>
+                                    {user?.email ?
+                                          <Button onClick={googleSignOut} variant="outline-danger m-2">logOut</Button>
+                                          :
+                                          <Button onClick={handelSignUp} variant="outline-danger m-2">SignUp</Button>
+
+                                    }
                                     <Navbar.Text>
                                           Signed in as: <a href="#login">{user.displayName}</a>
                                     </Navbar.Text>

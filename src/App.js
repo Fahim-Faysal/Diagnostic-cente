@@ -12,7 +12,6 @@ import AuthProvider from './components/Context/AuthProvider';
 function App() {
   return (
     <div className="App">
-
       <AuthProvider>
         <BrowserRouter>
           <Header></Header>

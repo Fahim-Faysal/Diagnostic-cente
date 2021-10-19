@@ -15,7 +15,7 @@ const Header = () => {
       }
       return (
             <div>
-                  <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                  <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top" >
                         <Container>
                               <Navbar.Brand to="#home" className='text-info'>Faysal Diagnostic <br />Center</Navbar.Brand>
                               <Navbar.Toggle />
@@ -25,10 +25,10 @@ const Header = () => {
                                                 fontWeight: "bold",
                                                 color: "red"
                                           }}>Home</NavLink>
-                                          <NavLink className='text-decoration-none mx-5' to="/service" activeStyle={{
+                                          {/* <NavLink className='text-decoration-none mx-5' to="/service/:serviceId" activeStyle={{
                                                 fontWeight: "bold",
                                                 color: "red"
-                                          }}>Services Detalis</NavLink>
+                                          }}>Services Detalis</NavLink> */}
                                           <NavLink className='text-decoration-none mx-5' to="/doctor" activeStyle={{
                                                 fontWeight: "bold",
                                                 color: "red"
@@ -38,22 +38,25 @@ const Header = () => {
                                                 color: "red"
                                           }}>About Us</NavLink>
                                     </Nav>
-                                    <Button onClick={handelLgoin} variant="outline-success">LogIn</Button>
+                                    {!user.email &&
+                                          <Button onClick={handelLgoin} variant="outline-success">LogIn</Button>
+                                    }
                                     {user?.email ?
                                           <Button onClick={googleSignOut} variant="outline-danger m-2">logOut</Button>
                                           :
                                           <Button onClick={handelSignUp} variant="outline-danger m-2">SignUp</Button>
 
                                     }
-                                    <Navbar.Text className='text-warning'>
-                                          Signed in as: {user.displayName}
-                                    </Navbar.Text>
+                                    {user.email &&
+                                          <Navbar.Text className='text-warning'>
+                                                Wellcome :  {user.displayName}
+                                          </Navbar.Text>}
                               </Navbar.Collapse>
 
                         </Container>
                   </Navbar>
 
-            </div>
+            </div >
       );
 };
 

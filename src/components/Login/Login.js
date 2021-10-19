@@ -1,11 +1,30 @@
 import React, { useState } from 'react';
+import { useHistory, useLocation } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import useAuth from '../../hooks/useAuth';
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
+
+      let history = useHistory()
+      let location = useLocation()
+
+      const redirect_uri = location?.state?.from || '/home';
+
       const { GoogleSignIn } = useAuth()
       const auth = getAuth();
+
+      const handeGoogleLogIn = () => {
+            GoogleSignIn()
+                  .then(result => {
+                        history.push(redirect_uri)
+                  })
+                  .catch(error => {
+                        setError(error.messeage)
+                  })
+      }
+
 
       const [euser, setEuser] = useState({})
       const [error, setError] = useState('')
@@ -36,8 +55,8 @@ const Login = () => {
                   })
       }
       return (
-            <div className='mx-auto w-50 mt-5'>
-                  <h1 className='text-success'>Please Login Here</h1>
+            <div className='mx-auto w-25 mt-5'>
+                  <h1 className='text-success'>Please Login</h1>
                   <form onSubmit={hendelRegistation}>
                         <div className="mb-3">
                               <label for="exampleInputEmail1" className="form-label">Email address</label>
@@ -48,20 +67,19 @@ const Login = () => {
                               <label for="exampleInputPassword1" className="form-label">Password</label>
                               <input onBlur={passwordValue} type="password" className="form-control" id="exampleInputPassword1" />
                         </div>
-                        <div className="mb-3 form-check">
-                              <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                              <label className="form-check-label" for="exampleCheck1">Check me out</label>
-                        </div>
+
                         <div className='text-danger'>
                               {error}
                         </div>
                         <br />
                         <button type="submit" className="btn btn-primary">LogIn</button>
                   </form>
+                  <br />
+                  <p>Don't Have an Account? <Link to='/signup'>Register Here</Link></p>
                   <div>
-                        <h3 className='text-primary mt-5'>SignUp With Google</h3>
+                        <h3 className='text-primary mt-5'>LogIn With Google</h3>
 
-                        < button onClick={GoogleSignIn} className='btn-danger p-2 mt-5'>Google SignUp</button>
+                        < button onClick={handeGoogleLogIn} className='btn-danger p-2 mt-5'>Google SignUp</button>
 
                         <br /><br />
 

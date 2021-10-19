@@ -3,7 +3,7 @@ import about from '../../Images/about.jpg'
 const AboutUs = () => {
       return (
             <div>
-
+                  <h1 className='text-success m-5'>About Faysal Diagnostic Center</h1>
                   <div class="container">
                         <div class="row row-col-6">
                               <div class="col">

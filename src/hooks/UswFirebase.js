@@ -15,14 +15,14 @@ const UseFirebase = () => {
 
 
       const GoogleSignIn = () => {
-            signInWithPopup(auth, googleProvider)
-                  .then(result => {
-                        console.log(result.user)
-                        setuser(result.user)
-                  })
-                  .catch(error => {
-                        setError(error.messeage)
-                  })
+            return signInWithPopup(auth, googleProvider);
+            // .then(result => {
+            //       console.log(result.user)
+            //       setuser(result.user)
+            // })
+            // .catch(error => {
+            //       setError(error.messeage)
+            // })
       }
 
       useEffect(() => {

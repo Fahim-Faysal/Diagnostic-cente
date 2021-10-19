@@ -19,10 +19,13 @@ const Details = () => {
 
       return (
             <div>
-                  <h1>Detalis comming soon : {serviceId}</h1>
-                  <h3>Name is : {result?.name}</h3>
-                  <p>Description : {result?.description}</p>
-            </div>
+                  <h2>Service Code is : {serviceId}</h2>
+                  <br />
+                  <img className='img-fluid' style={{ width: '50rem', height: '40rem' }} src={result?.img} alt="" />
+                  <h3> {result?.name}</h3>
+                  <p>{result?.description}</p>
+                  <h3 className='text-danger'>Cost:$ {result?.price}</h3>
+            </div >
       );
 };
 

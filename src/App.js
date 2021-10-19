@@ -34,18 +34,15 @@ function App() {
             <Route path='/signup'>
               <SignUp></SignUp>
             </Route>
-            <Route path='/service/:serviceId'>
+            <PrivateRoute path='/service/:serviceId'>
               <Details></Details>
-            </Route>
+            </PrivateRoute>
             <Route path='/login'>
               <Login></Login>
             </Route>
             <Route path='*'>
               <NotFound></NotFound>
             </Route>
-            {/* <Route path='/service'>
-            <Service></Service>
-          </Route> */}
           </Switch>
           <Footer></Footer>
         </BrowserRouter>

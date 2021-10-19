@@ -13,8 +13,8 @@ const Banner = () => {
                               alt="First slide"
                         />
                         <Carousel.Caption>
-                              <h3>First slide label</h3>
-                              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                              <h3>Bood Test Lab</h3>
+                              <p>All type of the are done here </p>
                         </Carousel.Caption>
                   </Carousel.Item>
                   <Carousel.Item>
@@ -25,8 +25,8 @@ const Banner = () => {
                         />
 
                         <Carousel.Caption>
-                              <h3>Second slide label</h3>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                              <h3>Science Lab</h3>
+                              <p>Critical condition patient are admitted here</p>
                         </Carousel.Caption>
                   </Carousel.Item>
                   <Carousel.Item>
@@ -37,8 +37,8 @@ const Banner = () => {
                         />
 
                         <Carousel.Caption>
-                              <h3>Third slide label</h3>
-                              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                              <h3>X Ray Lab</h3>
+                              <p>All The Cardiac realted test are done here</p>
                         </Carousel.Caption>
                   </Carousel.Item>
             </Carousel>

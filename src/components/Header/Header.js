@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, useHistory } from "react-router-dom";
-import { Button, Carousel, Container, Nav, Navbar, Placeholder } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 
 
@@ -28,7 +28,7 @@ const Header = () => {
                                           <NavLink className='text-decoration-none mx-5' to="/service" activeStyle={{
                                                 fontWeight: "bold",
                                                 color: "red"
-                                          }}>Services</NavLink>
+                                          }}>Services Detalis</NavLink>
                                           <NavLink className='text-decoration-none mx-5' to="/doctor" activeStyle={{
                                                 fontWeight: "bold",
                                                 color: "red"

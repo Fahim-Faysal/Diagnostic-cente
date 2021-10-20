@@ -46,9 +46,10 @@ const Login = () => {
 
             signInWithEmailAndPassword(auth, email, password)
                   .then(result => {
-                        console.log(result.user);
-                        setEuser(result.user)
-                        setError('')
+                        history.push(redirect_uri)
+                        // console.log(result.user);
+                        // setEuser(result.user)
+                        // setError('')
                   })
                   .catch(error => {
                         setError('User not Found')

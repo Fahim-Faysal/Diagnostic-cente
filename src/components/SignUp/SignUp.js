@@ -46,9 +46,11 @@ const SignUp = () => {
             }
             createUserWithEmailAndPassword(auth, email, password)
                   .then(result => {
+                        history.push(redirect_uri)
                         const user = result.user
-                        setEuser(user)
-                        setError('')
+                        console.log(user);
+                        // setEuser(user)
+                        // setError('')
                   })
 
       }

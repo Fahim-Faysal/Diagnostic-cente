@@ -47,10 +47,15 @@ const Header = () => {
                                           <Button onClick={handelSignUp} variant="outline-danger m-2">SignUp</Button>
 
                                     }
-                                    {user.email &&
+                                    {user.displayName ?
                                           <Navbar.Text className='text-warning'>
                                                 Wellcome :  {user.displayName}
+                                          </Navbar.Text>
+                                          :
+                                          <Navbar.Text className='text-warning'>
+                                                Wellcome :  {user?.email?.substring(0, user.email.lastIndexOf("@"))}
                                           </Navbar.Text>}
+
                               </Navbar.Collapse>
 
                         </Container>

@@ -52,6 +52,7 @@ const Header = () => {
                                                 Wellcome :  {user.displayName}
                                           </Navbar.Text>
                                           :
+                                          user.email &&
                                           <Navbar.Text className='text-warning'>
                                                 Wellcome :  {user?.email?.substring(0, user.email.lastIndexOf("@"))}
                                           </Navbar.Text>}
